@@ -1,0 +1,53 @@
+replicaCount: 1
+
+image:
+  repository: ale55ander/arm64-azure-pipeline-agent
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+fullnameOverride: "azdevops-pipeline-agent"
+
+serviceAccount:
+  create: true
+
+# Copied "as is" to kubernetes deployment
+livenessProbe:
+  exec:
+    command:
+      - "pgrep"
+      - "Agen"
+  initialDelaySeconds: 30
+
+# Copied "as is" to kubernetes deployment
+readinessProbe:
+  exec:
+    command:
+      - "pgrep"
+      - "Agen"
+
+  initialDelaySeconds: 30
+
+configEnv:
+  AZP_POOL: null
+
+secretEnv:
+  AZP_URL: null
+  AZP_TOKEN: null
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
