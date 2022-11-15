@@ -1,7 +1,6 @@
 # Disclaimer
 Run this at your own risk.
 
-# How to run
 Create a Helm Chart with a Azure pipeline agent to run Azure DevOps CI/CD automations in your own kubernetes cluster.
 
 ## Prerequisites
@@ -10,6 +9,7 @@ Create a Helm Chart with a Azure pipeline agent to run Azure DevOps CI/CD automa
 - Knowledge how to build a Docker image from a Dockerfile (optional)
 - Knowledge how to send a Docker image to a container registry (optional)
 
+# How to run
 You can build your own Docker image and push it to your image repo or you can use mine **ale55ander/arm64-azure-pipeline-agent:latest**.
 
 > To change the O. S. Arch, change the parameter TARGETARCH at the Dockerfile
