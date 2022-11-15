@@ -4,9 +4,10 @@ Run this at your own risk.
 Create a Helm Chart with a Azure pipeline agent to run Azure DevOps CI/CD automations in your own kubernetes cluster.
 
 ## Prerequisites
-- Have a kubernetes cluster or similar running
-- Knowledge how to install applications on kubernetes through Helm utility
-- Knowledge how to build a Docker image from a Dockerfile (optional)
+- Have a kubernetes cluster or similar running;
+- Have the Helm utility installed on your machine;
+- Knowledge how to install applications on kubernetes through Helm utility;
+- Knowledge how to build a Docker image from a Dockerfile (optional);
 - Knowledge how to send a Docker image to a container registry (optional)
 
 # How to run
